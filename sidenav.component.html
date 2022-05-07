@@ -1,0 +1,28 @@
+<mat-toolbar >
+    <mat-toolbar-row >
+        <button mat-icon-button>
+            <mat-icon (click)="sidenav.toggle();">menu</mat-icon>
+        </button>
+        <h1>Faculty</h1>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav  >
+        <mat-nav-list>
+            <a mat-list-item>View Timetable</a>
+            <a mat-list-item>View Assignments</a>
+            <a mat-list-item>Request Book</a>
+            <a mat-list-item>Return Book</a>
+            <a mat-list-item>View Event</a>
+            <a mat-list-item>Logout</a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div style="height: 88vh;">
+            <div>
+                <img [src]="myimage" alt="" height="545" width="1345">
+            </div>
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
